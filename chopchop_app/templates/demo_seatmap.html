@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static '/js/jquery-1.9.1.min.js' %}"></script>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static '/css/demo_seatmap.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="#" />
+
+</head>
+<div class="container-fluid " id="dashboard_bar">
+
+    <div class="row top-bar">
+
+        <div class="col-xs-4 ">
+            <h2>CHOP CHOPE</h2>
+            <h3>Seat Availability Prototype <br>
+                Ultrasonic Sensors | Raspberry Pi | Web Server </h3>
+        </div>
+        <div class="col-xs-4 ">
+            <div class="side-box">
+                <table>
+                    <tr>
+                        <td><b>Dashboard :</b></td>
+
+                        <td align="right">{now_}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Total Session :</td>
+
+                        <td align="right"> {total_person}&ensp; person</td>
+                    </tr>
+                    <tr>
+                        <td>Overall Avg Time Spend :</td>
+
+                        <td align="right">{avg_time}&ensp; m</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div class="col-xs-2 ">
+            <div class="side-box">
+                <table>
+                    <tr>
+                        <td>&ensp;</td>
+                        <td>&ensp;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Most Popular Seat : &ensp;</td>
+
+                        <td align="right"> {most_pop}</td>
+                    </tr>
+                    <tr>
+                        <td>Last Popular Seat : &ensp;</td>
+
+                        <td align="right">{min_pop}</td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-2 ">
+            <div class="side-box">
+                <table>
+                    <tr>
+                        <td>&ensp;</td>
+                        <td>&ensp;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Max Duration : &ensp;</td>
+
+                        <td align="right"> {max_time} &ensp; m</td>
+                    </tr>
+                    <tr>
+                        <td>Min Duration :&ensp;</td>
+
+                        <td align="right">{min_time} &ensp; m</td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<div class="row">
+
+
+    <div class="table-round table-row shadow-custom">
+        <div class="circle-top shadow-custom" id="1">
+        </div>
+        <div class="circle-right shadow-custom" id="2">
+        </div>
+
+        <div class="circle-buttom shadow-custom" id="3"></div>
+        <div class="circle-left shadow-custom" id="4"></div>
+
+
+        <div class="table-round-2 shadow-custom">
+            <div class="circle-top shadow-custom">
+            </div>
+            <div class="circle-right shadow-custom">
+            </div>
+
+            <div class="circle-buttom shadow-custom"></div>
+            <div class="circle-left shadow-custom"></div>
+
+        </div>
+
+        <div class="table-round-3 shadow-custom">
+            <div class="circle-top shadow-custom">
+            </div>
+            <div class="circle-right shadow-custom">
+            </div>
+
+            <div class="circle-buttom shadow-custom"></div>
+            <div class="circle-left shadow-custom"></div>
+
+        </div>
+
+        <div class="table-round-4 shadow-custom">
+            <div class="circle-top shadow-custom">
+            </div>
+            <div class="circle-right shadow-custom">
+            </div>
+
+            <div class="circle-buttom shadow-custom"></div>
+            <div class="circle-left shadow-custom"></div>
+
+        </div>
+
+        <div class="table-round-5 shadow-custom">
+            <div class="circle-top shadow-custom">
+            </div>
+            <div class="circle-right shadow-custom">
+            </div>
+
+            <div class="circle-buttom shadow-custom"></div>
+            <div class="circle-left shadow-custom"></div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script id="human_html_block" type="text/html">
+    <div class="object">
+        <div class="human">
+            <div class="human-head"></div>
+        </div>
+    </div>
+</script>
+
+<script id="popup_html_block" type="text/html">
+    <div class="container-popup-{x}">
+        <table>
+            <tr>
+                <td class="td-popup">Been here since</td>
+
+                <td class="td-popup" align="right"> {in_time}</td>
+            </tr>
+            <tr>
+                <td class="td-popup">Duration</td>
+
+                <td class="td-popup" align="right">{duration} m</td>
+            </tr>
+            <tr>
+                <td class="td-popup">Likely to leave in</td>
+
+                <td class="td-popup" align="right">{predic_duration} m</td>
+            </tr>
+        </table>
+    </div>
+</script>
+
+<script id="plate_html_block" type="text/html">
+    <div class="plate">
+    </div>
+</script>
+
+</body>
+
+<script src="{% static '/js/get-chair-update.js' %}"></script>
+
+</html>

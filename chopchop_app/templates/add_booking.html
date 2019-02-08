@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}Chop Chop{% endblock %}
+{% block content %}
+
+
+     <!---- Working HTML file : Booking Form, We decided to pivot this part ---->
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8" role="main">
+                <div class="panel panel-default panel-shadow">
+
+                    <form action="/add-booking" method="post" class="form-horizontal">
+                        <div class="panel-body form-group-lg">
+                            <h1> Add Booking </h1>
+
+
+                            <p>Name</p>
+                            <input type='text' class="form-control" name="user_name" required/>
+
+                            <p>Phone Number</p>
+                             <input type='text' class="form-control" name="phone_num" required/>
+
+                            <label for="t1">Table list (select one):</label>
+                                  <select class="form-control" id="t1" name="table_i">
+                                      {% for t in table_option %}
+                                        <option value={{ t.table_id }}>{{ t.name }}</option>
+                                      {%endfor%}
+                                  </select>
+
+
+                            <p>Date</p>
+                            <div class='input-group date' id='datepicker1'>
+                                <input type='text' class="form-control" name="date" required/>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+
+                            <p>Start Time</p>
+                            <div class='input-group date' id='timepicker1'>
+                                <input type='text' class="form-control" name="start_time" required/>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+
+                            <p>End Time</p>
+                            <div class='input-group date' id='timepicker2'>
+                                <input type='text' class="form-control" name="end_time" required/>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="panel-footer">
+                            <div class="pull-left fluid post-box-warning">
+                                {% if errors %}<p>{{ errors }}</p>{% endif %}
+                            </div>
+                            <div class="pull-right">
+                                {% csrf_token %}
+                                <input type='submit' value="Book"/>
+                                {% csrf_token %}
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datepicker1').datetimepicker({
+                format: 'L',
+                minDate: new Date(),
+                disabledDates: [new Date()],
+                defaultDate: new Date()
+            });
+        });
+        $(function () {
+            $('#timepicker1').datetimepicker({
+                format: 'LT',
+                stepping: 15,
+                defaultDate: new Date()
+            });
+        });
+        $(function () {
+            $('#timepicker2').datetimepicker({
+                format: 'LT',
+                stepping: 15,
+                defaultDate: new Date()
+            });
+        });
+
+    </script>
+
+{% endblock %}
