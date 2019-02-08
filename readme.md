@@ -11,7 +11,7 @@ The demo consists of Django web app, and the Raspberry Pi components
 - Frontend : 
 Please refer to chop-chope/chopchop_app/templates/ for HTML files, and  
 chop-chope/chopchop_app/static/ for CSS JS files 
-- Raspberry Pi code : ... 
+- Raspberry Pi code : raspberrypi-sensor.py  
 
 We need to set up the Ultrasonic sensors and Raspberry Pi inorder to do the demo. Please contact our team for live demo. :) 
 
