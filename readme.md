@@ -1,11 +1,19 @@
 
+<b>CEO Challenge Submission</b>
+
+1) Please watch the demo video here >>  https://youtu.be/NMcB2Vl40Ms
+
+2) Our Prototype has been deployed to heroku >>  https://chop-chope.herokuapp.com/
+
+3) Pitching Slide >>  Refer to our git repo "chop-chope/CEO Challenge - Chop-Chope Final for Submission.pdf"
+
+4) Additional files >> Mockup for Useability Interview "chop-chope/mockup-for-interview.zip"
+
+
 <b>Chop Chope Seat Avaliability Prototype</b>
 
-Please watch the demo video here >>  https://youtu.be/NMcB2Vl40Ms
+The demo consists of several components 
 
-Our Prototype has been deployed to heroku >>  https://chop-chope.herokuapp.com/
-
-The demo consists of Django web app, and the Raspberry Pi components 
 - Backend : Django related files can be found in this repo
 - Databse : db.sqlite
 - Frontend : 
