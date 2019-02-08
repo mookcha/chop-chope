@@ -1,5 +1,5 @@
 
-Chop Chope Prototype
+<b>Chop Chope Seat Avaliability Prototype</b>
 
 Please watch the demo video here >>  https://youtu.be/NMcB2Vl40Ms
 
@@ -13,7 +13,7 @@ Please refer to chop-chope/chopchop_app/templates/ for HTML files, and
 chop-chope/chopchop_app/static/ for CSS JS files 
 - Raspberry Pi code : raspberrypi-sensor.py  
 
-We need to set up the Ultrasonic sensors and Raspberry Pi inorder to do the demo. 
+We need to set up the Ultrasonic sensors and Raspberry Pi inorder to do the demo. <br>
 Please contact our team for live demo. :) 
 
 -----------------------------------------------
@@ -28,7 +28,7 @@ We have decided to pivot from this use case based on the findings from field res
 
 - D3 Dashboard :
 We explore D3.js to help visualize the seat availability data (dashboard.html) 
-The current page is using mock data. 
+The current page is using mock data.   https://chop-chope.herokuapp.com/dashboard
 
 
 
