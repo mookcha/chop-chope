@@ -41,7 +41,7 @@ pandas==0.22.0
 parse==1.8.4
 pathlib==1.0.1
 pew==1.1.0
-Pillow==4.3.0
+Pillow==6.2.0
 pipenv==8.3.2
 poster==0.8.1
 psycopg2==2.7.3.1
